@@ -1,8 +1,6 @@
 # Project Overview
 
-## Project Name
-
-The name of your project.
+## Super Cool Project Name
 
 ## Project Description
 
