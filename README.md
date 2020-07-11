@@ -1,14 +1,14 @@
-# ***partOf***
+# partOf
 
 ### Project Description
 
 This is a website that connects people to local non-profits and charities. With the users permission it will employ the location services on their device, and mark local organizations on a map. From there a user can click on the markers or look at the information bar which will list the same data. In this list they will see titles, descriptions, donation acceptance status, a link to donate, and links to their social profiles. 
 
-## API and Data Sample
+### API and Data Sample
 
 Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
 
-## Wireframes
+### Wireframes
 |  Mobile            |
 :-------------------------:|
 |![Mobile](https://git.generalassemb.ly/HenryCook/super-project/blob/master/wire-frames/Screen%20Shot%202020-07-11%20at%203.57.52%20PM.png?raw=true)|
