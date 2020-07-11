@@ -6,7 +6,157 @@ This is a website that connects people to local non-profits and charities. With 
 
 ### API and Data Sample
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
+The API's I'm using are from [Charity API](http://charityapi.orghunter.com/) provided by [OrgHunter](https://orghunter.com/). Specifically, I am using their [Charity Search Summary API](http://charityapi.orghunter.com/content/charity-search-summary-api) which can take in latitude and longitude as parameters. This will search for orgainizations within a specified milage of the user. The second API is the [Charity Basic API](http://charityapi.orghunter.com/content/charity-basic-api). This API will be used after obtaining the orgainizations EIN number when the search query comes back. This is in an effort to gain further information about the orgainizations the user clicks on the map or item list. Unfortunately not all non-profits or charities are going to come back after the request with completed data-sets. I will do my best to provide as much information as possible, but sometimes I will be limited. 
+
+|  JSON from Charity Search Summary API  |
+:-------------------------:|
+
+```JSON
+   {
+            "ein": "237451740",
+            "charityName": "NICHIREN SHOSHU ACADEMY NEW YORK",
+            "url": "http://www.orghunter.com/organization/237451740",
+            "donationUrl": "http://donate.makemydonation.org/donate/237451740",
+            "city": "LONG IS CITY",
+            "state": "New York",
+            "zipCode": "11101-2806",
+            "start": 0,
+            "rows": 20,
+            "recordCount": 650,
+            "score": 1,
+            "acceptingDonations": 1,
+            "category": "Not Provided",
+            "eligibleCd": 1,
+            "deductibilityCd": 1,
+            "statusCd": 1,
+            "website": "",
+            "missionStatement": "",
+            "parent_ein": 1,
+            "longitude": "-73.934456",
+            "latitude": "40.752659"
+        },
+        {
+            "ein": "593799225",
+            "charityName": "FRIENDS OF BORDEN AVENUE HOMELESS",
+            "url": "http://www.orghunter.com/organization/593799225",
+            "donationUrl": "http://donate.makemydonation.org/donate/593799225",
+            "city": "SUNNYSIDE",
+            "state": "New York",
+            "zipCode": "11104-0000",
+            "start": 0,
+            "rows": 20,
+            "recordCount": 650,
+            "score": 1,
+            "acceptingDonations": 0,
+            "category": "Not Provided",
+            "eligibleCd": 0,
+            "deductibilityCd": 0,
+            "statusCd": 4,
+            "website": "",
+            "missionStatement": "",
+            "parent_ein": 1,
+            "longitude": "-73.919815",
+            "latitude": "40.744873"
+        }
+```
+
+|  JSON from Charity Basic API - Example of Lack of data  |
+:-------------------------:|
+```JSON
+{
+    "code": 200,
+    "msg": "OK, all went through!",
+    "data": {
+        "ein": "593799225",
+        "name": "FRIENDS OF BORDEN AVENUE HOMELESS",
+        "inCareOfName": "",
+        "street": "C/O RONALD CASEY",
+        "city": "SUNNYSIDE",
+        "state": "NY",
+        "zipCode": "11104-0000",
+        "country": "USA",
+        "groupExemption": null,
+        "subsection": "501(c)(0)",
+        "classification": "",
+        "affiliation": null,
+        "rullingDate": "",
+        "deductibility": null,
+        "deductibilityStatus": null,
+        "foundation": null,
+        "activity1": null,
+        "activity2": null,
+        "activity3": null,
+        "organization": null,
+        "exemptStatus": null,
+        "taxPeriod": "",
+        "assetCodeDesc": null,
+        "incomeCodeDesc": null,
+        "filingRequirementCodeDesc ": null,
+        "pfFilingRequirementCodeDesc": null,
+        "accountingPeriod": null,
+        "assetAmount": "0.00",
+        "incomeAmount": "0.00",
+        "form990": "0.00",
+        "nteeCd": "?",
+        "nteeClass": "Not Provided",
+        "nteeType": "Not Provided",
+        "sortName": "@",
+        "revocationDt": "2011-05-15",
+        "revPostingDt": "2012-02-22",
+        "irsRevocationStatus": "This Charity is listed on the IRS revocation file and not on the pub78 file.",
+        "acceptingDonations": "0"
+    }
+}
+```
+|  JSON from Charity Basic API - Example of desired amount of data  |
+:-------------------------:|
+```JSON
+{
+    "code": 200,
+    "msg": "OK, all went through!",
+    "data": {
+        "ein": "205846694",
+        "name": "KIDS FOR TOMORROW INC",
+        "inCareOfName": "SAMANTHA TANNEHILL",
+        "street": "353THIRDAVEUNIT127",
+        "city": "NEWYORK",
+        "state": "NY",
+        "zipCode": "10010-0000",
+        "country": "USA",
+        "groupExemption": null,
+        "subsection": "501(c)(3)",
+        "classification": "Charitable Organization",
+        "affiliation": "Independent - This code is used if the organization is an independent organization or an independent auxiliary (i.e., not affiliated with a National, Regional, or Geographic grouping of organizations).",
+        "rullingDate": "July, 2008",
+        "deductibility": "Contributions are deductible.",
+        "deductibilityStatus": "PC",
+        "foundation": "Organization which receives a substantial part of its support from a governmental unit or the general public   170(b)(1)(A)(vi)",
+        "activity1": null,
+        "activity2": null,
+        "activity3": null,
+        "organization": "Corporation",
+        "exemptStatus": "Unconditional Exemption",
+        "taxPeriod": "December, 2016",
+        "assetCodeDesc": "0",
+        "incomeCodeDesc": "0",
+        "filingRequirementCodeDesc ": "Not required to file (income less than $25,000)",
+        "pfFilingRequirementCodeDesc": "No PF return",
+        "accountingPeriod": "December",
+        "assetAmount": "0.00",
+        "incomeAmount": "0.00",
+        "form990": "0.00",
+        "nteeCd": "Q33",
+        "nteeClass": "International Relief",
+        "nteeType": "International, Foreign Affairs and National Security",
+        "sortName": "",
+        "revocationDt": null,
+        "revPostingDt": null,
+        "irsRevocationStatus": null,
+        "acceptingDonations": "1"
+    }
+}
+```
+
 
 ### Wireframes
 |  Mobile            |
