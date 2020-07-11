@@ -1,8 +1,6 @@
-## Project Overview: 
-
 # ***partOf***
 
-## Project Description
+### Project Description
 
 This is a website that connects people to local non-profits and charities. With the users permission it will employ the location services on their device, and mark local organizations on a map. From there a user can click on the markers or look at the information bar which will list the same data. In this list they will see titles, descriptions, donation acceptance status, a link to donate, and links to their social profiles. 
 
