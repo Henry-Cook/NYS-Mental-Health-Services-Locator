@@ -1,4 +1,4 @@
-# partOf
+# New York State Mental Health Servics Locator
 
 ### Project Description
 
@@ -80,6 +80,7 @@ The main API that I will be using is the [Local Mental Health Programs API](http
 
 
 ### Wireframes
+
 |  Mobile            |
 :-------------------------:|
 |![Mobile](https://git.generalassemb.ly/HenryCook/super-project/blob/master/wire-frames/Screen%20Shot%202020-07-11%20at%203.57.52%20PM.png?raw=true)|
@@ -93,6 +94,7 @@ Made with [wireframe.cc](https://wireframe.cc/)
 
 
 ### MVP 
+
 *Minimum Viable Product*
 - Mobile first design with media queries to change content layout for mobile vs desktop users. 
 - Add a search bar for the user to input a city name.
@@ -104,6 +106,7 @@ Made with [wireframe.cc](https://wireframe.cc/)
 
 
 ### PostMVP  
+
 *Features that will help create a better expierence and better website. 
 - Light and dark modes.
 - Hover effect on markers when mouse is on the cards.
@@ -113,6 +116,7 @@ Made with [wireframe.cc](https://wireframe.cc/)
 
 
 ### Project Schedule
+
 |  Day | Deliverable | Status
 |---|---| ---|
 |July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
@@ -131,11 +135,12 @@ Made with [wireframe.cc](https://wireframe.cc/)
 |July 16| Work on postMVP's | Incomplete
 |July 17| Presentations | Incomplete
 
-## Priority Matrix
+### Priority Matrix
 
 ![Priority Matrix Chart](https://git.generalassemb.ly/HenryCook/super-project/blob/master/Priority-Matrix/Untitled%20Diagram.png?raw=true)
 
-## Timeframes
+### Timeframes
+
 *Please Note: This time frame only includes items in the MVP list, Nothing from the PostMVP list.*
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
@@ -147,10 +152,10 @@ Made with [wireframe.cc](https://wireframe.cc/)
 | Upgrading CSS | M | 4hrs| - | - |
 | Total | - | 21hrs| - | - |
 
-## Code Snippet
+### Code Snippet
 
 *This will be completed on thursday after the code is completed*
 
-## Change Log
+### Change Log
 
 *Will record any changes here*
