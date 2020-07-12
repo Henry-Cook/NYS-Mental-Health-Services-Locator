@@ -112,20 +112,23 @@ Made with [wireframe.cc](https://wireframe.cc/)
 - Create algo to display the ```"human_address": "{\"address\": \"4 21 27th Avenue\", \"city\": \"Astoria\", \"state\": \"NY\", \"zip\": \"11102-4510\"}"``` field to add more content to the cards and pop-ups.
 
 
-## Project Schedule
-
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
-
+### Project Schedule
 |  Day | Deliverable | Status
 |---|---| ---|
-|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |July 13| Project Approval | Incomplete
-|July 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|July 14| Pseudocode / actual code | Incomplete
-|July 15| Initial Clickable Model  | Incomplete
-|July 16| MVP | Incomplete
+|July 13|Write Pseudocode for JS file. | Incomplete
+|July 13|Create color scheme and optimal fonts.  | Incomplete
+|July 13|Create HTML structure. | Incomplete
+|July 13|Use media queries to create Mobile and Desktop mock-ups. | Incomplete
+|July 13|Create the Mapbox Map. | Incomplete
+|July 14|Create a function that returns the users input and capitalizes first letter.  | Incomplete
+|July 14|  Create a function to make an API call to main API using the users inputed city name.  | Incomplete
+|July 14| Create function to iterate through the data and create both a map marker and a card for each organization. | Incomplete
+|July 14| Add popups to the markers using condensed version of the data.  | Incomplete
+|July 15| Confirm that MVP is completed | Incomplete
+|July 15| Upgrade the CSS | Incomplete
+|July 16| Work on postMVP's | Incomplete
 |July 17| Presentations | Incomplete
 
 ## Priority Matrix
