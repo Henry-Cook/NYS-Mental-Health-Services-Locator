@@ -2,160 +2,81 @@
 
 ### Project Description
 
-This is a website that connects people to local non-profits and charities. With the users permission it will employ the location services on their device, and mark local organizations on a map. From there a user can click on the markers or look at the information bar which will list the same data. In this list they will see titles, descriptions, donation acceptance status, a link to donate, and links to their social profiles. 
+This is a website that connects people who live in New York State to local mental health programs and other human services organizations. A user will type in the their city name, and then the [Mapbox GL JS](https://www.mapbox.com/) library that is integrated in this website, will plot out available orgainizations on the map. From there a user can click on the markers or look at the information bar which will list the same data. The data will consist of titles, descriptions, and phone numbers. 
 
 ### API and Data Sample
 
-The API's I'm using are from [Charity API](http://charityapi.orghunter.com/) provided by [OrgHunter](https://orghunter.com/). Specifically, I am using their [Charity Search Summary API](http://charityapi.orghunter.com/content/charity-search-summary-api) which can take in latitude and longitude as parameters. This will search for orgainizations within a specified milage of the user. The second API is the [Charity Basic API](http://charityapi.orghunter.com/content/charity-basic-api). This API will be used after obtaining the orgainizations EIN number when the search query comes back. This is in an effort to gain further information about the orgainizations the user clicked on the map or item list. Unfortunately not all non-profits or charities are going to come back after the request with completed data-sets. I will do my best to provide as much information as possible, but sometimes I will be limited. 
+The main API that I will be using is the [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) provided by [New York State](https://data.ny.gov/). The Parameter I will be passing into the get request will be `program_city=Cityname`. The cities first letter must be capitalized for a succesful request. If succesful the request will return data in a JSON format. 
 
-|  JSON from Charity Search Summary API  |
+*Please note: The second JSON object does not contain latitude and longitude. Unfortunetely at this time those entries will not be listed on this site. However this is not the norm, the majority of the objects will contain this data.*
+ 
+
+|  Sample JSON from [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) |
 :-------------------------:|
 
 ```JSON
-   {
-            "ein": "237451740",
-            "charityName": "NICHIREN SHOSHU ACADEMY NEW YORK",
-            "url": "http://www.orghunter.com/organization/237451740",
-            "donationUrl": "http://donate.makemydonation.org/donate/237451740",
-            "city": "LONG IS CITY",
-            "state": "New York",
-            "zipCode": "11101-2806",
-            "start": 0,
-            "rows": 20,
-            "recordCount": 650,
-            "score": 1,
-            "acceptingDonations": 1,
-            "category": "Not Provided",
-            "eligibleCd": 1,
-            "deductibilityCd": 1,
-            "statusCd": 1,
-            "website": "",
-            "missionStatement": "",
-            "parent_ein": 1,
-            "longitude": "-73.934456",
-            "latitude": "40.752659"
-        },
-        {
-            "ein": "593799225",
-            "charityName": "FRIENDS OF BORDEN AVENUE HOMELESS",
-            "url": "http://www.orghunter.com/organization/593799225",
-            "donationUrl": "http://donate.makemydonation.org/donate/593799225",
-            "city": "SUNNYSIDE",
-            "state": "New York",
-            "zipCode": "11104-0000",
-            "start": 0,
-            "rows": 20,
-            "recordCount": 650,
-            "score": 1,
-            "acceptingDonations": 0,
-            "category": "Not Provided",
-            "eligibleCd": 0,
-            "deductibilityCd": 0,
-            "statusCd": 4,
-            "website": "",
-            "missionStatement": "",
-            "parent_ein": 1,
-            "longitude": "-73.919815",
-            "latitude": "40.744873"
+  [
+    {
+        "row_created_date_time": "2018-04-27T09:52:56.000",
+        "sponsor_name": "Goodwill Industries of Greater New York Inc.",
+        "sponsor_code": "598099",
+        "agency_name": "Goodwill Industries of Greater New York Inc.",
+        "agency_code": "40460",
+        "facility_name": "Goodwill Industries of Greater New York Inc.",
+        "facility_code": "6329",
+        "program_name": "Goodwill PROS Rebound",
+        "program_code": "003",
+        "populations_served": "Adults",
+        "agency_phone": "(718)728-5400",
+        "program_phone": "(718)728-5400",
+        "program_address_1": "4-21 27th Avenue",
+        "program_city": "Astoria",
+        "program_state": "NY",
+        "program_zip": "11102-4510",
+        "operating_certificate_required": "Y",
+        "operating_certificate_duration": "36",
+        "program_county": "Queens",
+        "program_region": "New York City",
+        "program_type_description": "Comprehensive PROS with Clinical Treatment",
+        "program_category_description": "Outpatient",
+        "program_subcategory_description": "Personalized Recovery-Oriented Services",
+        "location": {
+            "latitude": "40.784048",
+            "longitude": "-73.917088",
+            "human_address": "{\"address\": \"4 21 27th Avenue\", \"city\": \"Astoria\", \"state\": \"NY\", \"zip\": \"11102-4510\"}"
         }
+    },
+    {
+        "row_created_date_time": "2018-04-27T09:52:56.000",
+        "sponsor_name": "Creedmoor Psychiatric Center",
+        "sponsor_code": "905099",
+        "agency_name": "Creedmoor Psychiatric Center",
+        "agency_code": "90050",
+        "facility_name": "Creedmoor Psychiatric Center",
+        "facility_code": "0005",
+        "program_name": "Steinway Community Services",
+        "program_code": "441",
+        "populations_served": "Adults",
+        "agency_phone": "(718)464-7500",
+        "program_phone": "(718)726-5953",
+        "program_address_1": "38-11 Broadway",
+        "program_city": "Astoria",
+        "program_state": "NY",
+        "program_zip": "11103",
+        "operating_certificate_required": "Y",
+        "operating_certificate_duration": "36",
+        "program_county": "Queens",
+        "program_region": "New York City",
+        "program_type_description": "Clinic Treatment",
+        "program_category_description": "Outpatient",
+        "program_subcategory_description": "Clinic Treatment",
+        "location": {
+            "human_address": "{\"address\": \"38 11\", \"city\": \"Astoria\", \"state\": \"NY\", \"zip\": \"11103\"}"
+        }
+    }
+]
 ```
 
-|  JSON from Charity Basic API - Example of Lack of data  |
-:-------------------------:|
-```JSON
-{
-    "code": 200,
-    "msg": "OK, all went through!",
-    "data": {
-        "ein": "593799225",
-        "name": "FRIENDS OF BORDEN AVENUE HOMELESS",
-        "inCareOfName": "",
-        "street": "C/O RONALD CASEY",
-        "city": "SUNNYSIDE",
-        "state": "NY",
-        "zipCode": "11104-0000",
-        "country": "USA",
-        "groupExemption": null,
-        "subsection": "501(c)(0)",
-        "classification": "",
-        "affiliation": null,
-        "rullingDate": "",
-        "deductibility": null,
-        "deductibilityStatus": null,
-        "foundation": null,
-        "activity1": null,
-        "activity2": null,
-        "activity3": null,
-        "organization": null,
-        "exemptStatus": null,
-        "taxPeriod": "",
-        "assetCodeDesc": null,
-        "incomeCodeDesc": null,
-        "filingRequirementCodeDesc ": null,
-        "pfFilingRequirementCodeDesc": null,
-        "accountingPeriod": null,
-        "assetAmount": "0.00",
-        "incomeAmount": "0.00",
-        "form990": "0.00",
-        "nteeCd": "?",
-        "nteeClass": "Not Provided",
-        "nteeType": "Not Provided",
-        "sortName": "@",
-        "revocationDt": "2011-05-15",
-        "revPostingDt": "2012-02-22",
-        "irsRevocationStatus": "This Charity is listed on the IRS revocation file and not on the pub78 file.",
-        "acceptingDonations": "0"
-    }
-}
-```
-|  JSON from Charity Basic API - Example of desired amount of data  |
-:-------------------------:|
-```JSON
-{
-    "code": 200,
-    "msg": "OK, all went through!",
-    "data": {
-        "ein": "205846694",
-        "name": "KIDS FOR TOMORROW INC",
-        "inCareOfName": "SAMANTHA TANNEHILL",
-        "street": "353THIRDAVEUNIT127",
-        "city": "NEWYORK",
-        "state": "NY",
-        "zipCode": "10010-0000",
-        "country": "USA",
-        "groupExemption": null,
-        "subsection": "501(c)(3)",
-        "classification": "Charitable Organization",
-        "affiliation": "Independent - This code is used if the organization is an independent organization or an independent auxiliary (i.e., not affiliated with a National, Regional, or Geographic grouping of organizations).",
-        "rullingDate": "July, 2008",
-        "deductibility": "Contributions are deductible.",
-        "deductibilityStatus": "PC",
-        "foundation": "Organization which receives a substantial part of its support from a governmental unit or the general public   170(b)(1)(A)(vi)",
-        "activity1": null,
-        "activity2": null,
-        "activity3": null,
-        "organization": "Corporation",
-        "exemptStatus": "Unconditional Exemption",
-        "taxPeriod": "December, 2016",
-        "assetCodeDesc": "0",
-        "incomeCodeDesc": "0",
-        "filingRequirementCodeDesc ": "Not required to file (income less than $25,000)",
-        "pfFilingRequirementCodeDesc": "No PF return",
-        "accountingPeriod": "December",
-        "assetAmount": "0.00",
-        "incomeAmount": "0.00",
-        "form990": "0.00",
-        "nteeCd": "Q33",
-        "nteeClass": "International Relief",
-        "nteeType": "International, Foreign Affairs and National Security",
-        "sortName": "",
-        "revocationDt": null,
-        "revPostingDt": null,
-        "irsRevocationStatus": null,
-        "acceptingDonations": "1"
-    }
-}
-```
 
 
 ### Wireframes
