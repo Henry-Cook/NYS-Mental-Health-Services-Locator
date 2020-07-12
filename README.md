@@ -1,14 +1,14 @@
-# New York State Mental Health Servics Locator
+# New York State Mental Health Services Locator
 
-### Project Description
+## Project Description
 
-This is a website that connects people who live in New York State to local mental health programs and other human services organizations. A user will type in the their city name, and then the [Mapbox GL JS](https://www.mapbox.com/) library that is integrated in this website, will plot out available orgainizations on the map. From there a user can click on the markers or look at the information bar which will list the same data. The data will consist of titles, descriptions, and phone numbers. 
+This is a website that connects people who live in New York State to local mental health programs and other human services organizations. A user will type in the their city name, and then the [Mapbox GL JS](https://www.mapbox.com/) library will plot out available orgainizations on the map. From there a user can click on the markers or look at the information bar which will list the same data. The data will consist of titles, descriptions, and phone numbers. 
 
-### API and Data Sample
+## API and Data Sample
 
-The main API that I will be using is the [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) provided by [New York State](https://data.ny.gov/). The Parameter I will be passing into the get request will be `program_city=Cityname`. The cities first letter must be capitalized for a succesful request. If succesful the request will return data in a JSON format. 
+The main API that is being used is the [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) provided by [New York State](https://data.ny.gov/). The Parameter being passing into the get request will be `program_city=Cityname`. The cities first letter must be capitalized for a succesful request. If succesful the request will return data in a JSON format. 
 
-*Please Note: The second JSON object does not contain latitude and longitude. Unfortunetely at this time those entries will not be listed on this site. However this is not the norm, the majority of the objects will contain this data.*
+*Please Note: The second JSON object does not contain latitude and longitude. Unfortunetely at this time those entries will not be listed on this site. However, this is not the norm and the majority of the data will contain these values.*
  
 
 |  Sample JSON from [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) |
@@ -79,7 +79,7 @@ The main API that I will be using is the [Local Mental Health Programs API](http
 
 
 
-### Wireframes
+## Wireframes
 
 |  Mobile            |
 :-------------------------:|
@@ -93,29 +93,31 @@ The main API that I will be using is the [Local Mental Health Programs API](http
 Made with [wireframe.cc](https://wireframe.cc/)
 
 
-### MVP 
+## MVP 
 
 *Minimum Viable Product*
-- Mobile first design with media queries to change content layout for mobile vs desktop users. 
-- Add a search bar for the user to input a city name.
+
+- Media queries used to change the content layout for mobile vs desktop users. 
+- A search bar for the user to input a city name.
 - Render a map centering on New York State using the [Mapbox GL JS](https://www.mapbox.com/) library.
-- Make an API call using [Axios](https://github.com/axios/axios) to New York State’s  [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8)  using the city name the user entered. 
-- Use returned data's latitude and longitudes fields to populate the map with markers.
-- Display program names, descriptions, catogories, and contact information on cards next to the map. 
+- Make an API call using [Axios](https://github.com/axios/axios) to New York State’s  [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) using the city name the user entered. 
+- Use returned data's latitude and longitude values to populate the map with markers.
+- Display program names, descriptions, categories, and contact information on cards next to the map. 
 - Display the same info except in a pop-up after you click a marker. 
 
 
-### PostMVP  
+## PostMVP  
 
-*Features that will help create a better expierence and better website. 
+*Features that will help create a better expierence and better website.*
+
 - Light and dark modes.
 - Hover effect on markers when mouse is on the cards.
 - Map animation to zoom in on selected city. 
 - Hover effect on cards.
-- Create algo to display the ```"human_address": "{\"address\": \"4 21 27th Avenue\", \"city\": \"Astoria\", \"state\": \"NY\", \"zip\": \"11102-4510\"}"``` field to add more content to the cards and pop-ups.
+- Write an function to display the ```"human_address": "{\"address\": \"4 21 27th Avenue\", \"city\": \"Astoria\", \"state\": \"NY\", \"zip\": \"11102-4510\"}"``` field to add more content to the cards and pop-ups.
 
 
-### Project Schedule
+## Project Schedule
 
 |  Day | Deliverable | Status
 |---|---| ---|
@@ -135,11 +137,11 @@ Made with [wireframe.cc](https://wireframe.cc/)
 |July 16| Work on postMVP's | Incomplete
 |July 17| Presentations | Incomplete
 
-### Priority Matrix
+## Priority Matrix
 
 ![Priority Matrix Chart](https://git.generalassemb.ly/HenryCook/super-project/blob/master/Priority-Matrix/Untitled%20Diagram.png?raw=true)
 
-### Timeframes
+## Timeframes
 
 *Please Note: This time frame only includes items in the MVP list, Nothing from the PostMVP list.*
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
@@ -152,10 +154,10 @@ Made with [wireframe.cc](https://wireframe.cc/)
 | Upgrading CSS | M | 4hrs| - | - |
 | Total | - | 21hrs| - | - |
 
-### Code Snippet
+## Code Snippet
 
 *This will be completed on thursday after the code is completed*
 
-### Change Log
+## Change Log
 
 *Will record any changes here*
