@@ -91,22 +91,26 @@ The main API that I will be using is the [Local Mental Health Programs API](http
 
 Made with [wireframe.cc](https://wireframe.cc/)
 
-### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
+### MVP 
+*Minimum Viable Product*
+- Mobile first design with media queries to change content layout for mobile vs desktop users. 
+- Add a search bar for the user to input a city name.
+- Render a map centering on New York State using the [Mapbox GL JS](https://www.mapbox.com/) library.
+- Make an API call using [Axios](https://github.com/axios/axios) to New York State’s  [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8)  using the city name the user entered. 
+- Use returned data's latitude and longitudes fields to populate the map with markers.
+- Display program names, descriptions, catogories, and contact information on cards next to the map. 
+- Display the same info except in a pop-up after you click a marker. 
 
-#### MVP 
-*These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+### PostMVP  
+*Features that will help create a better expierence and better website. 
+- Light and dark modes.
+- Hover effect on markers when mouse is on the cards.
+- Map animation to zoom in on selected city. 
+- Hover effect on cards.
+- Create algo to display the ```"human_address": "{\"address\": \"4 21 27th Avenue\", \"city\": \"Astoria\", \"state\": \"NY\", \"zip\": \"11102-4510\"}"``` field to add more content to the cards and pop-ups.
 
-#### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
-
-- Add second API
-- Use local storage to save user favorites
 
 ## Project Schedule
 
