@@ -6,7 +6,7 @@ This is a website that connects people who live in New York State to local menta
 
 ## API and Data Sample
 
-The main API that is being used is the [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) provided by [New York State](https://data.ny.gov/). The Parameter being passing into the get request will be `program_city=Cityname`. The cities first letter must be capitalized for a succesful request. If succesful the request will return data in a JSON format. 
+The main API that is being used is the [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) provided by [New York State](https://data.ny.gov/). The parameter being passed into the get request will be `program_city=Cityname`. The cities first letter must be capitalized for a succesful request. If succesful the request will return data in a JSON format. 
 
 *Please Note: The second JSON object does not contain latitude and longitude. Unfortunetely at this time those entries will not be listed on this site. However, this is not the norm and the majority of the data will contain these values.*
  
@@ -97,10 +97,10 @@ Made with [wireframe.cc](https://wireframe.cc/)
 
 *Minimum Viable Product*
 
-- Media queries used to change the content layout for mobile vs desktop users. 
+- Responsive desgin for mobile vs desktop users. 
 - A search bar for the user to input a city name.
 - Render a map centering on New York State using the [Mapbox GL JS](https://www.mapbox.com/) library.
-- Make an API call using [Axios](https://github.com/axios/axios) to New York State’s  [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) using the city name the user entered. 
+- Make an API call using [Axios](https://github.com/axios/axios) to New York State’s  [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) using the city name the user input. 
 - Use returned data's latitude and longitude values to populate the map with markers.
 - Display program names, descriptions, categories, and contact information on cards next to the map. 
 - Display the same info except in a pop-up after you click a marker. 
@@ -129,9 +129,9 @@ Made with [wireframe.cc](https://wireframe.cc/)
 |July 13|Use media queries to create Mobile and Desktop mock-ups. | Incomplete
 |July 13|Create the Mapbox Map. | Incomplete
 |July 14|Create a function that returns the users input and capitalizes first letter.  | Incomplete
-|July 14|  Create a function to make an API call to main API using the users inputed city name.  | Incomplete
-|July 14| Create function to iterate through the data and create both a map marker and a card for each organization. | Incomplete
-|July 14| Add popups to the markers using condensed version of the data.  | Incomplete
+|July 14| Create a function to make an API call to main API using the users inputed city name.  | Incomplete
+|July 14| Write a function to iterate through the data and create both a map marker and a card for each organization. | Incomplete
+|July 14| Add popups to the markers using a condensed version of the data.  | Incomplete
 |July 15| Confirm that MVP is completed | Incomplete
 |July 15| Upgrade the CSS | Incomplete
 |July 16| Work on postMVP's | Incomplete
