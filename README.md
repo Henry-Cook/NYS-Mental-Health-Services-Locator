@@ -133,7 +133,7 @@ Made with [wireframe.cc](https://wireframe.cc/)
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
+![Priority Matrix Chart](https://git.generalassemb.ly/HenryCook/super-project/blob/master/Priority-Matrix/Untitled%20Diagram.png?raw=true)
 
 ## Timeframes
 *Please Note: This time frame only includes items in the MVP list, Nothing from the PostMVP list.*
