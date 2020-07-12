@@ -8,7 +8,7 @@ This is a website that connects people who live in New York State to local menta
 
 The main API that I will be using is the [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) provided by [New York State](https://data.ny.gov/). The Parameter I will be passing into the get request will be `program_city=Cityname`. The cities first letter must be capitalized for a succesful request. If succesful the request will return data in a JSON format. 
 
-*Please note: The second JSON object does not contain latitude and longitude. Unfortunetely at this time those entries will not be listed on this site. However this is not the norm, the majority of the objects will contain this data.*
+*Please Note: The second JSON object does not contain latitude and longitude. Unfortunetely at this time those entries will not be listed on this site. However this is not the norm, the majority of the objects will contain this data.*
  
 
 |  Sample JSON from [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) |
@@ -136,26 +136,21 @@ Made with [wireframe.cc](https://wireframe.cc/)
 Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
 
 ## Timeframes
-
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
+*Please Note: This time frame only includes items in the MVP list, Nothing from the PostMVP list.*
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Project organization | H | 3hrs| - | - |
+|HTML & Basic CSS | M | 2hrs| - | - |
+| Adding  Mapbox Map  - 3 Hours  | H | 3hrs| - | - |
+| Creating the core JavaScript functionality | H | 8hrs| - | - |
+| Confirming that all MVP requirements are met| H | 1hr| - | - |
+| Upgrading CSS | M | 4hrs| - | - |
+| Total | - | 21hrs| - | - |
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
-
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
+*This will be completed on thursday after the code is completed*
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+
+*Will record any changes here*
