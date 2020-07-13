@@ -125,8 +125,7 @@ Made with [wireframe.cc](https://wireframe.cc/)
 |July 13| Project approval, organization, HTML & basic CSS.| Incomplete
 |July 14| Create functions for user input, add Mapbox map, and create a function for API call.| Incomplete
 |July 15| Plot data on map from api call, dynamically add returned content, add pop-ups to map markers. | Incomplete
-|July 15| Add CSS for responsivness on desktop, style map and card lists, make sure MVP is completed. | Incomplete
-|July 16| Work on postMVP's | Incomplete
+|July 16| Add CSS for responsivness on desktop, style map and card lists, make sure MVP is completed. | Incomplete
 |July 17| Presentations | Incomplete
 
 ## Priority Matrix
@@ -143,9 +142,6 @@ Made with [wireframe.cc](https://wireframe.cc/)
 | Add basic HTML structure | M | 3hrs| - | - |
 | Add basic mobile view oriented CSS - See wireframe | M | 3hrs| - | - |
 | Create the Mapbox map | M | 3hrs| - | - |
-| Add basic HTML structure | M | 3hrs| - | - |
-| Add basic HTML structure | M | 3hrs| - | - |
-| Add basic HTML structure | M | 3hrs| - | - |
 | Create a function that returns the users input and capitalizes first letter.|H | 2hrs| - | - |
 | Create a function to make an API call to main API using the users inputed city name. | H | 2hrs| - | - |
 | Create a function to iterate through the data and create a map marker| M | 3hrs| - | - | 
