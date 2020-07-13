@@ -6,7 +6,11 @@
     <link
     href=“https://fonts.googleapis.com/css2?family=*Montserrat*&display=swap”
     rel=“stylesheet”>
-    <!-- AXIOS CDN -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./reset.css" />
@@ -34,7 +38,7 @@
         <div class="search">
           <h3>Enter the city you would like to search in:</h3>
           <form>
-            <input type="text" placeholder="City Name" />
+            <input class="userInput" type="text" placeholder="City Name" />
             <button type="submit">Search</button>
           </form>
         </div>

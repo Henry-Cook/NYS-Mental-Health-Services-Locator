@@ -135,8 +135,8 @@ _Please Note: This time frame only includes items in the MVP list, Nothing from 
 | Write pseudocode for JS file | H | 2hrs| 1 | - |
 | Add basic HTML structure | M | 3hrs| 1 | - |
 | Add basic mobile view oriented CSS - See wireframe | M | 3hrs| 2 | - |
-| Create the Mapbox map | M | 3hrs| - | - |
-| Create a function that returns the users input and capitalizes first letter.|H | 2hrs| - | - |
+| Create the Mapbox map | M | 3hrs| 1 | - |
+| Create a function that returns the users input and capitalizes first letter.|H | 2hrs| 1 | - |
 | Create a function to make an API call to main API using the users inputed city name. | H | 2hrs| - | - |
 | Create a function to iterate through the data and create map markers| M | 3hrs| - | - |
 | Complete the above function by adding code to create a card for each JSON object. | M | 3hrs| - | - |
