@@ -144,7 +144,7 @@ Made with [wireframe.cc](https://wireframe.cc/)
 | Create the Mapbox map | M | 3hrs| - | - |
 | Create a function that returns the users input and capitalizes first letter.|H | 2hrs| - | - |
 | Create a function to make an API call to main API using the users inputed city name. | H | 2hrs| - | - |
-| Create a function to iterate through the data and create a map marker| M | 3hrs| - | - | 
+| Create a function to iterate through the data and create map markers| M | 3hrs| - | - | 
 | Complete the above function by adding code to create a card for each JSON object. | M | 3hrs| - | - |
 | Add popups to the map markers using | M | 3hrs| - | - |
 | Confirming that all MVP requirements are met| H | 1hrs| - | - |
