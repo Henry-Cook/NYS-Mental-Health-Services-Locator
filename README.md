@@ -2,17 +2,17 @@
 
 ## Project Description
 
-This is a website that connects people who live in New York State to local mental health programs and other human services organizations. A user will type in the their city name, and then with help from the [Mapbox GL JS](https://www.mapbox.com/) library will plot out available orgainizations on the map. From there a user can click on the markers or look at the information bar which will list the same data. The data will consist of titles, descriptions, and phone numbers. 
+This is a website that connects people who live in New York State to local mental health programs and other human services organizations. A user will type in the their city name, and then with help from the [Mapbox GL JS](https://www.mapbox.com/) library will plot out available orgainizations on the map. From there a user can click on the markers or look at the information bar which will list the same data. The data will consist of titles, descriptions, and phone numbers.
 
 ## API and Data Sample
 
-The main API that is being used is the [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) provided by [New York State](https://data.ny.gov/). The parameter being passed into the get request will be `program_city=Cityname`. The cities first letter must be capitalized for a succesful request. If succesful the request will return data in a JSON format. 
+The main API that is being used is the [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) provided by [New York State](https://data.ny.gov/). The parameter being passed into the get request will be `program_city=Cityname`. The cities first letter must be capitalized for a succesful request. If succesful the request will return data in a JSON format.
 
-*Please Note: The second JSON object does not contain latitude and longitude. Unfortunetely at this time those entries will not be listed on this site. However, this is not the norm and the majority of the data will contain these values.*
- 
+_Please Note: The second JSON object does not contain latitude and longitude. Unfortunetely at this time those entries will not be listed on this site. However, this is not the norm and the majority of the data will contain these values._
 
-|  Sample JSON from [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) |
-:-------------------------:|
+| Sample JSON from [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) |
+| :----------------------------------------------------------------------------------------------------------------------------: |
+
 
 ```JSON
   [
@@ -77,56 +77,50 @@ The main API that is being used is the [Local Mental Health Programs API](https:
 ]
 ```
 
-
-
 ## Wireframes
 
-|  Mobile            |
-:-------------------------:|
-|![Mobile](https://git.generalassemb.ly/HenryCook/super-project/blob/master/wire-frames/Screen%20Shot%202020-07-11%20at%203.57.52%20PM.png?raw=true)|
+|                                                                       Mobile                                                                        |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------: |
+| ![Mobile](https://git.generalassemb.ly/HenryCook/super-project/blob/master/wire-frames/Screen%20Shot%202020-07-11%20at%203.57.52%20PM.png?raw=true) |
 
-
-| Desktop            |
-:-------------------------:|
-|![desktop](https://git.generalassemb.ly/HenryCook/super-project/blob/master/wire-frames/Screen%20Shot%202020-07-11%20at%204.05.25%20PM.png?raw=true)| 
+|                                                                       Desktop                                                                        |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------: |
+| ![desktop](https://git.generalassemb.ly/HenryCook/super-project/blob/master/wire-frames/Screen%20Shot%202020-07-11%20at%204.05.25%20PM.png?raw=true) |
 
 Made with [wireframe.cc](https://wireframe.cc/)
 
+## MVP
 
-## MVP 
+_Minimum Viable Product_
 
-*Minimum Viable Product*
-
-- Responsive desgin for mobile vs desktop users. 
+- Responsive desgin for mobile vs desktop users.
 - A search bar for the user to input a city name.
 - Render a map centering on New York State using the [Mapbox GL JS](https://www.mapbox.com/) library.
-- Make an API call using [Axios](https://github.com/axios/axios) to New York State’s  [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) using the city name the user input. 
+- Make an API call using [Axios](https://github.com/axios/axios) to New York State’s [Local Mental Health Programs API](https://data.ny.gov/Human-Services/Local-Mental-Health-Programs/6nvr-tbv8) using the city name the user input.
 - Use returned data's latitude and longitude values to populate the map with markers.
-- Display program names, descriptions, categories, and contact information on cards next to the map. 
-- Display the same info except in a pop-up after you click a marker. 
+- Display program names, descriptions, categories, and contact information on cards next to the map.
+- Display the same info except in a pop-up after you click a marker.
 
+## PostMVP
 
-## PostMVP  
-
-*Features that will help create a better expierence and better website.*
+_Features that will help create a better expierence and better website._
 
 - Light and dark modes.
 - Hover effect on markers when mouse is on the cards.
-- Map animation to zoom in on selected city. 
+- Map animation to zoom in on selected city.
 - Hover effect on cards.
-- Write an function to display the ```"human_address": "{\"address\": \"4 21 27th Avenue\", \"city\": \"Astoria\", \"state\": \"NY\", \"zip\": \"11102-4510\"}"``` field to add more content to the cards and pop-ups.
-
+- Write an function to display the `"human_address": "{\"address\": \"4 21 27th Avenue\", \"city\": \"Astoria\", \"state\": \"NY\", \"zip\": \"11102-4510\"}"` field to add more content to the cards and pop-ups.
 
 ## Project Schedule
 
-|  Day | Deliverable | Status
-|---|---| ---|
-|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|July 13| Project approval, organization, HTML & basic CSS.| Incomplete
-|July 14| Create functions for user input, add Mapbox map, and create a function for API call.| Incomplete
-|July 15| Plot data on map from api call, dynamically add returned content, add pop-ups to map markers. | Incomplete
-|July 16| Add CSS for responsivness on desktop, style map and card lists, make sure MVP is completed. | Incomplete
-|July 17| Presentations | Incomplete
+| Day        | Deliverable                                                                                   | Status     |
+| ---------- | --------------------------------------------------------------------------------------------- | ---------- |
+| July 10-12 | Prompt / Wireframes / Priority Matrix / Timeframes                                            | Complete   |
+| July 13    | Project approval, organization, HTML & basic CSS.                                             | Incomplete |
+| July 14    | Create functions for user input, add Mapbox map, and create a function for API call.          | Incomplete |
+| July 15    | Plot data on map from api call, dynamically add returned content, add pop-ups to map markers. | Incomplete |
+| July 16    | Add CSS for responsivness on desktop, style map and card lists, make sure MVP is completed.   | Incomplete |
+| July 17    | Presentations                                                                                 | Incomplete |
 
 ## Priority Matrix
 
@@ -134,17 +128,17 @@ Made with [wireframe.cc](https://wireframe.cc/)
 
 ## Timeframes
 
-*Please Note: This time frame only includes items in the MVP list, Nothing from the PostMVP list.*
+_Please Note: This time frame only includes items in the MVP list, Nothing from the PostMVP list._
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Create color scheme and choose fonts | H | 2hrs| - | - |
-| Write pseudocode for JS file | H | 2hrs| - | - |
-| Add basic HTML structure | M | 3hrs| - | - |
-| Add basic mobile view oriented CSS - See wireframe | M | 3hrs| - | - |
+| --- | :---: | :---: | :---: | :---: |
+| Create color scheme and choose fonts | H | 2hrs| 1 | - |
+| Write pseudocode for JS file | H | 2hrs| 1 | - |
+| Add basic HTML structure | M | 3hrs| 1 | - |
+| Add basic mobile view oriented CSS - See wireframe | M | 3hrs| 2 | - |
 | Create the Mapbox map | M | 3hrs| - | - |
 | Create a function that returns the users input and capitalizes first letter.|H | 2hrs| - | - |
 | Create a function to make an API call to main API using the users inputed city name. | H | 2hrs| - | - |
-| Create a function to iterate through the data and create map markers| M | 3hrs| - | - | 
+| Create a function to iterate through the data and create map markers| M | 3hrs| - | - |
 | Complete the above function by adding code to create a card for each JSON object. | M | 3hrs| - | - |
 | Add popups to the map markers | M | 3hrs| - | - |
 | Confirm that all MVP requirements are met| H | 1hrs| - | - |
@@ -155,8 +149,8 @@ Made with [wireframe.cc](https://wireframe.cc/)
 
 ## Code Snippet
 
-*This will be completed on thursday after the code is completed*
+_This will be completed on thursday after the code is completed_
 
 ## Change Log
 
-*Will record any changes here*
+_Will record any changes here_
