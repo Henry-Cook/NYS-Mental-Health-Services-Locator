@@ -146,13 +146,13 @@ Made with [wireframe.cc](https://wireframe.cc/)
 *Please Note: This time frame only includes items in the MVP list, Nothing from the PostMVP list.*
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Project organization | H | 3hrs| - | - |
-|HTML & Basic CSS | M | 2hrs| - | - |
-| Adding  Mapbox Map  - 3 Hours  | H | 3hrs| - | - |
-| Creating the core JavaScript functionality | H | 8hrs| - | - |
-| Confirming that all MVP requirements are met| H | 1hr| - | - |
-| Upgrading CSS | M | 4hrs| - | - |
-| Total | - | 21hrs| - | - |
+| Project organization | H | 4hrs| - | - |
+|HTML & Basic CSS | M | 3hrs| - | - |
+| Adding  Mapbox Map | H | 4hrs| - | - |
+| Creating the core JavaScript functionality | H | 12hrs| - | - |
+| Confirming that all MVP requirements are met| H | 2hr| - | - |
+| Upgrading CSS | M | 6hrs| - | - |
+| Total | - | 31hrs| - | - |
 
 ## Code Snippet
 
