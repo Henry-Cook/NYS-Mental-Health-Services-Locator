@@ -146,8 +146,8 @@ Made with [wireframe.cc](https://wireframe.cc/)
 | Create a function to make an API call to main API using the users inputed city name. | H | 2hrs| - | - |
 | Create a function to iterate through the data and create map markers| M | 3hrs| - | - | 
 | Complete the above function by adding code to create a card for each JSON object. | M | 3hrs| - | - |
-| Add popups to the map markers using | M | 3hrs| - | - |
-| Confirming that all MVP requirements are met| H | 1hrs| - | - |
+| Add popups to the map markers | M | 3hrs| - | - |
+| Confirm that all MVP requirements are met| H | 1hrs| - | - |
 | Style the map | M | 1hr| - | - |
 | Style the cards | M | 1hr| - | - |
 | Style the search bar and surrounding area| M | 1hr| - | - |
