@@ -10,6 +10,7 @@
 
 h1 {
   margin: 10px 0 0 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1>em {
@@ -39,6 +40,11 @@ h1>span {
   background-color: #3e64ff;
 }
 
+.marker {
+  color: #3e64ff;
+  background-color: #3e64ff;
+}
+
 /* ---------- Card Container ---------- */
 
 .card-list {
@@ -58,7 +64,7 @@ h1>span {
   border: solid #3e64ff 2px;
   width: 95%;
   height: 100px;
-  margin: 10px 0 0 0;
+  margin: 10px auto;
 }
 
 input {
@@ -66,10 +72,19 @@ input {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   width: 95%;
-  height: 80px;
+  height: 150px;
   margin: 10px 0 0 0;
-  background-color: #3e64ff;
+  border: #3e64ff solid 1px;
+}
+
+.card>p {
+  font-family: 'Montserrat', sans-serif;
+  margin: 2px;
+  font-size: 15px;
 }
 
 /* ---------- Media Queries ---------- */
@@ -92,8 +107,8 @@ input {
   }
   .card {
     width: 95%;
-    height: 80px;
+    height: 150px;
     margin: 10px 0 0 0;
-    background-color: #3e64ff;
+    border: #3e64ff solid 1px;
   }
 }
