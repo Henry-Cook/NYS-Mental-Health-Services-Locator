@@ -122,18 +122,10 @@ Made with [wireframe.cc](https://wireframe.cc/)
 |  Day | Deliverable | Status
 |---|---| ---|
 |July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|July 13| Project Approval | Incomplete
-|July 13|Write Pseudocode for JS file. | Incomplete
-|July 13|Create color scheme and optimal fonts.  | Incomplete
-|July 13|Create HTML structure. | Incomplete
-|July 13|Use media queries to create Mobile and Desktop mock-ups. | Incomplete
-|July 13|Create the Mapbox Map. | Incomplete
-|July 14|Create a function that returns the users input and capitalizes first letter.  | Incomplete
-|July 14| Create a function to make an API call to main API using the users inputed city name.  | Incomplete
-|July 14| Write a function to iterate through the data and create both a map marker and a card for each organization. | Incomplete
-|July 14| Add popups to the markers using a condensed version of the data.  | Incomplete
-|July 15| Confirm that MVP is completed | Incomplete
-|July 15| Upgrade the CSS | Incomplete
+|July 13| Project approval, organization, HTML & basic CSS.| Incomplete
+|July 14| Create functions for user input, add Mapbox map, and create a function for API call.| Incomplete
+|July 15| Plot data on map from api call, dynamically add returned content, add pop-ups to map markers. | Incomplete
+|July 15| Add CSS for responsivness on desktop, style map and card lists, make sure MVP is completed. | Incomplete
 |July 16| Work on postMVP's | Incomplete
 |July 17| Presentations | Incomplete
 
@@ -146,13 +138,24 @@ Made with [wireframe.cc](https://wireframe.cc/)
 *Please Note: This time frame only includes items in the MVP list, Nothing from the PostMVP list.*
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Project organization | H | 4hrs| - | - |
-|HTML & Basic CSS | M | 3hrs| - | - |
-| Adding  Mapbox Map | H | 4hrs| - | - |
-| Creating the core JavaScript functionality | H | 12hrs| - | - |
-| Confirming that all MVP requirements are met| H | 2hr| - | - |
-| Upgrading CSS | M | 6hrs| - | - |
-| Total | - | 31hrs| - | - |
+| Create color scheme and choose fonts | H | 2hrs| - | - |
+| Write pseudocode for JS file | H | 2hrs| - | - |
+| Add basic HTML structure | M | 3hrs| - | - |
+| Add basic mobile view oriented CSS - See wireframe | M | 3hrs| - | - |
+| Create the Mapbox map | M | 3hrs| - | - |
+| Add basic HTML structure | M | 3hrs| - | - |
+| Add basic HTML structure | M | 3hrs| - | - |
+| Add basic HTML structure | M | 3hrs| - | - |
+| Create a function that returns the users input and capitalizes first letter.|H | 2hrs| - | - |
+| Create a function to make an API call to main API using the users inputed city name. | H | 2hrs| - | - |
+| Create a function to iterate through the data and create a map marker| M | 3hrs| - | - | 
+| Complete the above function by adding code to create a card for each JSON object. | M | 3hrs| - | - |
+| Add popups to the map markers using | M | 3hrs| - | - |
+| Confirming that all MVP requirements are met| H | 1hrs| - | - |
+| Style the map | M | 1hr| - | - |
+| Style the cards | M | 1hr| - | - |
+| Style the search bar and surrounding area| M | 1hr| - | - |
+| Total | - | 40hrs| - | - |
 
 ## Code Snippet
 
