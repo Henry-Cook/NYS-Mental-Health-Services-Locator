@@ -5,7 +5,7 @@ var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/hfcpost/ckckvf68502cz1jmfdnzbpjki", // stylesheet location
   center: [-76.182, 42.868], // starting position [lng, lat]
-  zoom: 5.7, // starting zoom
+  zoom: 4.5, // starting zoom
 });
 
 // Making an AXIOS get request to the New York State API.

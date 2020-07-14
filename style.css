@@ -91,14 +91,14 @@ input {
 }
 
 .empty-div {
-  height: 575px;
+  height: 455px;
   width: 100%;
 }
 
 h1 {
   margin: 10px 0 0 0;
   font-family: 'Montserrat', sans-serif;
-  font-size: 25px;
+  font-size: 18px;
   color: #3e64ff;
 }
 
