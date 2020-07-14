@@ -42,12 +42,7 @@ main {
 }
 
 #map {
-  height: 50vh;
-  background-color: #3e64ff;
-}
-
-.marker {
-  color: #3e64ff;
+  height: 35vh;
   background-color: #3e64ff;
 }
 
