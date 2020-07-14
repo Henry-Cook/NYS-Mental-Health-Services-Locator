@@ -33,18 +33,31 @@ const userInput = (e) => {
 const form = document.querySelector("form");
 form.addEventListener("submit", userInput);
 
+let currentMarkers = [];
+
 // Function that marks map and creates cards.
 const elementCreator = (data) => {
-  console.log(data.data);
+  // Sorts the elements in data.data placing an orgainizations programs next to eachother.
+  data.data.sort((a, b) => (a.agency_name > b.agency_name ? 1 : -1));
+  // Not my code right here see => https://stackoverflow.com/questions/46155523/mapbox-clear-all-current-markers
+  // needed to clear all the markers from the map when switching cities and this guy had a good solution.
+  if (currentMarkers.length !== 0) {
+    for (let i = currentMarkers.length - 1; i >= 0; i--) {
+      currentMarkers[i].remove();
+    }
+  }
+  // Back to my code.
   for (let i = 0; i < data.data.length; i++) {
     if (data.data[i].location.latitude) {
-      var popup = new mapboxgl.Popup({ offset: 25 })
+      let popup = new mapboxgl.Popup({ offset: 25 })
         .setHTML(
-          `<h1>${data.data[i].facility_name}</h1> <br> <p>${data.data[i].program_type_description}</p>`
+          `<h1>${data.data[i].agency_name}</h1> <p>${
+            data.data[i].program_type_description
+          }</p><a href="#${[i]}">More Info</a>`
         )
         .setMaxWidth("300px");
 
-      var marker = new mapboxgl.Marker({ color: "#3e64ff" })
+      let marker = new mapboxgl.Marker({ color: "#3e64ff" })
         .setLngLat([
           data.data[i].location.longitude,
           data.data[i].location.latitude,
@@ -56,11 +69,13 @@ const elementCreator = (data) => {
           data.data[0].location.longitude,
           data.data[0].location.latitude,
         ],
-        zoom: 12,
+        zoom: 11,
         essential: true, // this animation is considered essential with respect to prefers-reduced-motion
       });
+      currentMarkers.push(marker);
     }
   }
+
   addCard(data);
 };
 
@@ -68,13 +83,45 @@ const addCard = (data) => {
   for (let i = 0; i < data.data.length; i++) {
     const cardList = document.querySelector(".card-list");
     const newCard = document.createElement("div");
-    newCard.innerHTML = `<h1>${data.data[i].agency_name}</h1>
-    <br>
-    <p>${data.data[i].populations_served}</p>
-    <p>${data.data[i].agency_phone}</p>
-    <p>${data.data[i].program_address_1}</p>
-    <p>${data.data[i].program_city}, ${data.data[i].program_state}</p>
-    <p>${data.data[i].program_zip}</p>`;
+    // newCard.setAttribute("id", `${[i]}`);
+    if (
+      data.data[i].program_name !== data.data[i].program_name &&
+      data.data[i].populations_served !== undefined
+    ) {
+      newCard.innerHTML = ` <a class="anchor" id="${[i]}"></a> <h1>${
+        data.data[i].agency_name
+      }</h1>
+        <p>${data.data[i].program_name}</p>
+        <p>${data.data[i].program_type_description}</p>
+        <p>${data.data[i].populations_served}</p>
+        <p>${data.data[i].agency_phone}</p>
+        <p>${data.data[i].program_address_1}</p>
+        <p>${data.data[i].program_city}, ${data.data[i].program_state}</p>
+        <p>${data.data[i].program_zip}</p>`;
+    } else if (
+      data.data[i].program_name === data.data[i].program_name &&
+      data.data[i].populations_served !== undefined
+    ) {
+      newCard.innerHTML = `<a class="anchor" id="${[i]}"></a> <h1>${
+        data.data[i].agency_name
+      }</h1>
+      <p>${data.data[i].program_name}</p>
+      <p>${data.data[i].populations_served}</p>
+      <p>${data.data[i].agency_phone}</p>
+      <p>${data.data[i].program_address_1}</p>
+      <p>${data.data[i].program_city}, ${data.data[i].program_state}</p>
+      <p>${data.data[i].program_zip}</p>`;
+    } else {
+      newCard.innerHTML = `<a class="anchor" id="${[i]}"></a><h1>${
+        data.data[i].agency_name
+      }</h1>
+      <p>${data.data[i].program_name}</p>
+      <p>${data.data[i].agency_phone}</p>
+      <p>${data.data[i].program_address_1}</p>
+      <p>${data.data[i].program_city}, ${data.data[i].program_state}</p>
+      <p>${data.data[i].program_zip}</p>`;
+    }
+
     newCard.className = "card";
     cardList.append(newCard);
   }

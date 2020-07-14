@@ -1,3 +1,16 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* This isn't my code its from => https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header, 
+I'm using this block of CSS to offset the anchor tag that I scrolled to since there are fixed elements on my site.*/
+a.anchor {
+  display: block;
+  position: relative;
+  top: -500px;
+  visibility: hidden;
+}
+
 /* ------- Top Container/Nav-Bar ------- */
 
 .title-container {
@@ -5,18 +18,18 @@
   flex-direction: column;
   height: 60px;
   width: 100vw;
-  border-bottom: #3e64ff solid 2px;
+  border-bottom: #3e64ff solid 1px;
   background-color: #fff;
 }
 
-h1>em {
+h1 > em {
   font-size: 20px;
   margin: 20px 0 5px 5px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #3e64ff;
 }
 
-h1>span {
+h1 > span {
   font-size: 20px;
   margin: 20px 0 0 10px;
   color: #3e64ff;
@@ -26,7 +39,7 @@ h1>span {
   font-size: 12px;
   margin-left: 15px;
   font-style: italic;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* ----------- Map Container ---------- */
@@ -43,7 +56,6 @@ main {
 
 #map {
   height: 35vh;
-  background-color: #3e64ff;
 }
 
 /* ---------- Card Container ---------- */
@@ -63,14 +75,48 @@ main {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  border: solid #3e64ff 2px;
+  box-shadow: 0.5px 0.5px 2px #888888;
   height: 100px;
   margin: 10px auto;
   background-color: #fff;
+  width: 98%;
+}
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #3e64ff;
+  margin-bottom: 12px;
 }
 
 input {
-  margin: 0 0 10px 0;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 10px 10px 0;
+  width: 90%;
+  height: 30px;
+  border-radius: 1%;
+  border: none;
+  border-bottom: 2px solid #3e64ff;
+  caret-color: #3e64ff;
+}
+input:focus {
+  outline: none;
+}
+button {
+  color: white;
+  background-color: #3e64ff;
+  font-family: "Montserrat", sans-serif;
+  width: 40%;
+  height: 35px;
+  border-radius: 7%;
+  border: none;
+}
+button:hover {
+  background-color: #4b6efa;
+  box-shadow: 1px 1px 5px #888888;
+}
+.user-inputs {
+  display: flex;
+  flex-direction: row;
 }
 
 .card {
@@ -80,12 +126,12 @@ input {
   width: 95%;
   height: 150px;
   margin: 10px 0 0 0;
-  border: #3e64ff solid 1px;
+  box-shadow: 0.5px 0.5px 3px #888888;
   padding: 10px;
 }
 
-.card>p {
-  font-family: 'Montserrat', sans-serif;
+.card > p {
+  font-family: "Montserrat", sans-serif;
   margin: 2px;
   font-size: 15px;
 }
@@ -97,14 +143,14 @@ input {
 
 h1 {
   margin: 10px 0 0 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   color: #3e64ff;
 }
 
 /* ---------- Media Queries ---------- */
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   html {
     height: 100vh;
     width: 100vw;
@@ -127,10 +173,11 @@ h1 {
   #map {
     width: 60%;
     height: 100vh;
+    border-radius: 2%;
   }
   .card-list {
     width: 35vw;
-    margin-left: 28px;
+    margin-left: 2.5vw;
   }
   .search {
     width: 35vw;
@@ -142,10 +189,15 @@ h1 {
     width: 95%;
     height: 180px;
     margin: 10px 0 0 0;
-    border: #3e64ff solid 1px;
   }
   .empty-div {
     width: 35vw;
     height: 180px;
+  }
+  a.anchor {
+    display: block;
+    position: relative;
+    top: -200px;
+    visibility: hidden;
   }
 }
