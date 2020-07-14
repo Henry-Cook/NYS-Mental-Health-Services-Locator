@@ -109,6 +109,7 @@ _Features that will help create a better expierence and better website._
 - Hover effect on markers when mouse is on the cards.
 - Map animation to zoom in on selected city.
 - Hover effect on cards.
+- Directions that appear untill a user makes a search.
 
 ## Project Schedule
 
