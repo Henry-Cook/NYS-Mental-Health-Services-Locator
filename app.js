@@ -35,6 +35,7 @@ form.addEventListener("submit", userInput);
 
 // Function that marks map and creates cards.
 const elementCreator = (data) => {
+  console.log(data.data);
   for (let i = 0; i < data.data.length; i++) {
     if (data.data[i].location.latitude) {
       var popup = new mapboxgl.Popup({ offset: 25 })
@@ -58,10 +59,9 @@ const elementCreator = (data) => {
         zoom: 12,
         essential: true, // this animation is considered essential with respect to prefers-reduced-motion
       });
-
-      addCard(data);
     }
   }
+  addCard(data);
 };
 
 const addCard = (data) => {
