@@ -109,7 +109,7 @@ _Features that will help create a better expierence and better website._
 - Hover effect on markers when mouse is on the cards.
 - Map animation to zoom in on selected city.
 - Hover effect on cards.
-- Write an function to display the `"human_address": "{\"address\": \"4 21 27th Avenue\", \"city\": \"Astoria\", \"state\": \"NY\", \"zip\": \"11102-4510\"}"` field to add more content to the cards and pop-ups.
+- Directions that appear untill a user makes a search.
 
 ## Project Schedule
 
