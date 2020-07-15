@@ -7,6 +7,7 @@ var map = new mapboxgl.Map({
   center: [-76.182, 42.868], // starting position [lng, lat]
   zoom: 5, // starting zoom
 });
+//Dark mode style - mapbox://styles/hfcpost/ckcnkb2yu1d931imm7q2a6237
 const url = "https://data.ny.gov/resource/6nvr-tbv8.json";
 // Making an AXIOS get request to the New York State API.
 const apiCall = async (city) => {
@@ -91,7 +92,7 @@ const addCard = (data) => {
       newCard.innerHTML = ` <a class="anchor" id="${[i]}"></a> <h1>${
         data.data[i].agency_name
       }</h1>
-        <p>${data.data[i].program_name}</p>
+        <p >${data.data[i].program_name}</p>
         <p>${data.data[i].program_type_description}</p>
         <p>${data.data[i].populations_served}</p>
         <p>${data.data[i].agency_phone}</p>
@@ -134,3 +135,18 @@ const removeCards = () => {
     cardList.removeChild(cardList.lastChild);
   }
 };
+
+// This function allows the user to switch between light and dark modes.
+const modeBtn = document.querySelector(".dark-light-mode");
+const cssLink = document.querySelector("#mode");
+modeBtn.addEventListener("click", () => {
+  if (cssLink.getAttribute("href") == "./style.css") {
+    cssLink.href = "./darkMode.css";
+    map.setStyle("mapbox://styles/hfcpost/ckcnkb2yu1d931imm7q2a6237");
+    modeBtn.innerText = "Light Mode";
+  } else {
+    cssLink.href = "./style.css";
+    map.setStyle("mapbox://styles/hfcpost/ckckvf68502cz1jmfdnzbpjki");
+    modeBtn.innerText = "Dark Mode";
+  }
+});
