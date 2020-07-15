@@ -116,10 +116,10 @@ _Features that will help create a better expierence and better website._
 | Day        | Deliverable                                                                                   | Status     |
 | ---------- | --------------------------------------------------------------------------------------------- | ---------- |
 | July 10-12 | Prompt / Wireframes / Priority Matrix / Timeframes                                            | Complete   |
-| July 13    | Project approval, organization, HTML & basic CSS.                                             | Incomplete |
-| July 14    | Create functions for user input, add Mapbox map, and create a function for API call.          | Incomplete |
-| July 15    | Plot data on map from api call, dynamically add returned content, add pop-ups to map markers. | Incomplete |
-| July 16    | Add CSS for responsivness on desktop, style map and card lists, make sure MVP is completed.   | Incomplete |
+| July 13    | Project approval, organization, HTML & basic CSS.                                             | Complete   |
+| July 14    | Create functions for user input, add Mapbox map, and create a function for API call.          | Complete   |
+| July 15    | Plot data on map from api call, dynamically add returned content, add pop-ups to map markers. | Complete   |
+| July 16    | Add CSS for responsivness on desktop, style map and card lists, make sure MVP is completed.   | Complete   |
 | July 17    | Presentations                                                                                 | Incomplete |
 
 ## Priority Matrix
@@ -131,21 +131,21 @@ _Features that will help create a better expierence and better website._
 _Please Note: This time frame only includes items in the MVP list, Nothing from the PostMVP list._
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: | :---: | :---: | :---: |
-| Create color scheme and choose fonts | H | 2hrs| 1 | - |
-| Write pseudocode for JS file | H | 2hrs| 1 | - |
-| Add basic HTML structure | M | 3hrs| 1 | - |
-| Add basic mobile view oriented CSS - See wireframe | M | 3hrs| 2 | - |
-| Create the Mapbox map | M | 3hrs| 1 | - |
-| Create a function that returns the users input and capitalizes first letter.|H | 2hrs| 1 | - |
-| Create a function to make an API call to main API using the users inputed city name. | H | 2hrs| - | - |
-| Create a function to iterate through the data and create map markers| M | 3hrs| - | - |
-| Complete the above function by adding code to create a card for each JSON object. | M | 3hrs| - | - |
-| Add popups to the map markers | M | 3hrs| - | - |
-| Confirm that all MVP requirements are met| H | 1hrs| - | - |
-| Style the map | M | 1hr| - | - |
-| Style the cards | M | 1hr| - | - |
-| Style the search bar and surrounding area| M | 1hr| - | - |
-| Total | - | 40hrs| - | - |
+| Create color scheme and choose fonts | H | 2hrs| 1hr | - |
+| Write pseudocode for JS file | H | 2hrs| 1hr | - |
+| Add basic HTML structure | M | 3hrs| 1hr | - |
+| Add basic mobile view oriented CSS - See wireframe | M | 3hrs| 2hrs | - |
+| Create the Mapbox map | M | 3hrs| .5hr | - |
+| Create a function that returns the users input and capitalizes first letter.|H | 2hrs| 1hr | - |
+| Create a function to make an API call to main API using the users inputed city name. | H | 2hrs| .5hr | - |
+| Create a function to iterate through the data and create map markers| M | 3hrs| 2.5hrs | - |
+| Complete the above function by adding code to create a card for each JSON object. | M | 3hrs| 1hr | - |
+| Add popups to the map markers | M | 3hrs| 2hrs | - |
+| Confirm that all MVP requirements are met| H | 1hrs| .25hr | - |
+| Style the map | M | 1hr| 1 | .5hr |
+| Style the cards | M | 1hr| 1 | .5hr |
+| Style the search bar and surrounding area| M | 1hr| .5 | - |
+| Total | - | 40hrs| 14.25 | - |
 
 ## Code Snippet
 
