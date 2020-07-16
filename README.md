@@ -1,5 +1,7 @@
 # New York State Mental Health Services Locator
 
+https://pages.git.generalassemb.ly/HenryCook/NYS-Mental-Health-Services-Locator/
+
 ## Project Description
 
 This is a website that connects people who live in New York State to local mental health programs and other human services organizations. A user will type in the their city name, and then with help from the [Mapbox GL JS](https://www.mapbox.com/) library will plot out available orgainizations on the map. From there a user can click on the markers or look at the information bar which will list the same data. The data will consist of titles, descriptions, and phone numbers.
