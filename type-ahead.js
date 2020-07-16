@@ -1,3 +1,9 @@
+// The code is at the end of the array, I didn't have enough time to find
+// an API that I could use for city names.
+// I followed this tutorial => https://www.youtube.com/watch?v=y4gZMJKAeWs
+// to add a type predictor as a postMVP. The tutorial was great, but the code
+// doesn't resemble it much any more becuase I had to integrate into my site.
+
 const arr = [
   "ACCORD",
   "ADAMS",
@@ -1048,9 +1054,11 @@ const arr = [
   "YOUNGSTOWN",
   "ZENA",
 ];
-
+// This array is the new array that will hold sanitized data.
 let postCities = [];
 
+// This function takes the above array and makes each element lower case
+// except for the first character.
 const sanitizeArr = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     str = arr[i];
@@ -1063,11 +1071,13 @@ const sanitizeArr = (arr) => {
 
 sanitizeArr(arr);
 
+// Gathering my HTML elements.
 let searchInput = document.querySelector(".userInput");
 let suggestions = document.querySelector(".suggestions");
 let btn = document.querySelector("#btn");
 let certainLi = document.querySelectorAll("li");
 
+// This function actively finds matches from the arr above
 function findMatches(wordsToMatch, cities) {
   return cities.filter((place) => {
     const regex = new RegExp(wordsToMatch, "gi");
@@ -1075,6 +1085,9 @@ function findMatches(wordsToMatch, cities) {
   });
 }
 
+// After checking to make sure if the seach bar is empty
+// this function will display the matched elements from the
+// function above as li elements.
 function displayMatches() {
   if (searchInput.value === "") {
     while (suggestions.lastChild) {
@@ -1086,7 +1099,6 @@ function displayMatches() {
     }
 
     suggestions.setAttribute("display", "block");
-
     const matchArray = findMatches(this.value, postCities);
     const html = matchArray.forEach((place) => {
       const regex = new RegExp(this.value, "gi");
@@ -1099,9 +1111,10 @@ function displayMatches() {
   }
 }
 
-// searchInput.addEventListener("change", displayMatches);
 searchInput.addEventListener("keyup", displayMatches);
 
+// Event function that adds the predicted text to the
+// search bar when clicked.
 const listClick = (e) => {
   console.log(e);
   searchInput.value = e.target.innerText;
@@ -1110,10 +1123,11 @@ const listClick = (e) => {
   }
 };
 
+// Deletes leftover li elements when the form is submitted.
 const submitClick = () => {
   while (suggestions.lastChild) {
     suggestions.removeChild(suggestions.lastChild);
   }
 };
-
+// The event listener to the function directly above.
 btn.addEventListener("click", submitClick);

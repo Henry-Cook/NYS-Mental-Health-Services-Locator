@@ -20,21 +20,28 @@ const apiCall = async (city) => {
   }
 };
 
-// Function that grabs user input.
+// Function that grabs user input and sanitizes it.
 const userInput = (e) => {
+  // Stops page from reloading on form submit.
   e.preventDefault();
+  // Grabs user input.
   const userCity = document.querySelector(".userInput").value;
+  // Makes user input lowercase.
   let lowerCase = userCity.toLowerCase();
-  // let city = lowerCase[0].toUpperCase() + lowerCase.slice(1);
+  // Looks for the first letter and makes it uppcase, if two or more words,
+  // it will make that words first character uppcase as well.
   const city = lowerCase.replace(/\b\w/g, (l) => l.toUpperCase());
+  // Sets the value of the searh bar back to placeholder text.
   document.querySelector(".userInput").value = "";
-
+  // Makes API call.
   apiCall(city);
 };
+
 // Grabbing the form and adding an event listener.
 const form = document.querySelector("form");
 form.addEventListener("submit", userInput);
 
+// This array holds the marker count for the map.
 let currentMarkers = [];
 
 // Function that marks map and creates cards.
@@ -80,11 +87,14 @@ const elementCreator = (data) => {
   addCard(data);
 };
 
+// This is the function that creates the card elements.
+// There are multiple ways cards will be added becuase some of the JSON
+// has incomplete records and I wanted to minimize the amount of undefined
+// being displayed.
 const addCard = (data) => {
   for (let i = 0; i < data.data.length; i++) {
     const cardList = document.querySelector(".card-list");
     const newCard = document.createElement("div");
-    // newCard.setAttribute("id", `${[i]}`);
     if (
       data.data[i].program_name !== data.data[i].program_name &&
       data.data[i].populations_served !== undefined
@@ -137,6 +147,7 @@ const removeCards = () => {
 };
 
 // This function allows the user to switch between light and dark modes.
+// It also sets the style of the map.
 const modeBtn = document.querySelector(".dark-light-mode");
 const cssLink = document.querySelector("#mode");
 modeBtn.addEventListener("click", () => {
