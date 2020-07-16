@@ -85,6 +85,21 @@ main {
   height: 35vh;
 }
 
+.link {
+  color: #3e64ff;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link:visited {
+  color: #3e64ff;
+}
+
 /* ---------- Card Container ---------- */
 
 .card-list {
