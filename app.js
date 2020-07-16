@@ -73,7 +73,7 @@ const elementCreator = (data) => {
           data.data[0].location.latitude,
         ],
         zoom: 11,
-        essential: true, // this animation is considered essential with respect to prefers-reduced-motion
+        essential: true,
       });
     }
   }

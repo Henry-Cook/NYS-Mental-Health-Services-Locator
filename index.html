@@ -18,6 +18,7 @@
       src="https://kit.fontawesome.com/c60a5f5c77.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="./type-ahead.js"></script>
     <script defer src="./app.js"></script>
     <title>NYS Mental Health Locator</title>
   </head>
@@ -40,8 +41,9 @@
           <form>
             <div class="user-inputs">
               <input class="userInput" type="text" placeholder="City Name" />
-              <button type="submit">Search</button>
+              <button id="btn" type="submit">Search</button>
             </div>
+            <ul class="suggestions"></ul>
           </form>
         </div>
       </div>
@@ -50,7 +52,7 @@
     <div class="card-list">
       <div class="directions">
         <br />
-        <h1>Welcome to Healh Finder!</h1>
+        <h1>Welcome to Health Finder!</h1>
         <br />
         <p>
           The purpose of the website is to discover the orgainizations that

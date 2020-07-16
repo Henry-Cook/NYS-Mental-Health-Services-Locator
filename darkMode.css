@@ -276,3 +276,33 @@ h1 {
     margin: 10px 0 0 0;
   }
 }
+
+/* Type ahead styleing */
+
+ul {
+  background-color: #323232;
+  text-align: left;
+  list-style: none;
+  position: fixed;
+  padding: 15px;
+}
+
+.hl {
+  background-color: #ffcc3e;
+  color: black
+}
+
+li {
+  padding: 10px;
+  margin: 5px 0 0 0;
+  text-decoration: none;
+  border: #4b6efa 1px solid;
+  width: 200px;
+  color: white;
+  background-color: #3e64ff;
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: #3e64ff;
+}

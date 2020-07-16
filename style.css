@@ -256,3 +256,35 @@ h1 {
     font-size: 20px;
   }
 }
+
+/* Type ahead styleing */
+
+ul {
+  background-color: white;
+  text-align: left;
+  list-style: none;
+  position: fixed;
+  padding: 15px;
+}
+
+.hl {
+  background-color: white;
+  color: black;
+}
+
+li {
+  padding: 10px;
+  margin: 5px 0 0 0;
+  text-decoration: none;
+  border: #4b6efa 1px solid;
+  width: 200px;
+  color: #fff;
+  background-color: #3e64ff;
+  height: 10px;
+}
+
+li:hover {
+  cursor: pointer;
+  color: black;
+  background-color: white;
+}
