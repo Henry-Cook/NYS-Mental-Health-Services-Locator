@@ -23,14 +23,14 @@ a.anchor {
   background-color: #fff;
 }
 
-h1 > em {
+h1>em {
   font-size: 20px;
   margin: 20px 0 5px 5px;
   font-family: "Montserrat", sans-serif;
   color: #3e64ff;
 }
 
-h1 > span {
+h1>span {
   font-size: 20px;
   margin: 20px 0 0 10px;
   color: #3e64ff;
@@ -50,6 +50,7 @@ h1 > span {
   margin: 10px 0 0 0;
   font-size: 12px;
 }
+
 .dark-light-mode:hover {
   background-color: #4b6efa;
   box-shadow: 1px 1px 5px #888888;
@@ -111,6 +112,7 @@ input {
   border: none;
   border-bottom: 2px solid #3e64ff;
   caret-color: #3e64ff;
+  font-size: 15px;
 }
 
 input:focus {
@@ -148,7 +150,7 @@ button {
   padding: 10px;
 }
 
-.card > p {
+.card>p {
   font-family: "Montserrat", sans-serif;
   margin: 2px;
   font-size: 15px;
@@ -164,6 +166,17 @@ h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   color: #3e64ff;
+}
+
+.directions {
+  text-align: center;
+  width: 80%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.note {
+  font-style: italic;
+  font-weight: 300;
 }
 
 /* ---------- Media Queries ---------- */
@@ -224,15 +237,7 @@ h1 {
     width: 100px;
     margin: 10px 0 0 0;
   }
+  .directions {
+    font-size: 20px;
+  }
 }
-
-/* DARK MODE CLASSES */
-
-/* .card-dark>p {
-  color: white;
-}
-
-.search-dark button:hover {
-  background-color: #4b6efa;
-  box-shadow: 1px 1px 5px black;
-} */

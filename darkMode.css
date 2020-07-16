@@ -30,14 +30,14 @@ a.anchor {
   border-bottom: #3e64ff solid 1px;
 }
 
-h1 > em {
+h1>em {
   font-size: 20px;
   margin: 20px 0 5px 5px;
   font-family: "Montserrat", sans-serif;
   color: #3e64ff;
 }
 
-h1 > span {
+h1>span {
   font-size: 20px;
   margin: 20px 0 0 10px;
   color: #3e64ff;
@@ -58,10 +58,12 @@ h1 > span {
   margin: 10px 0 0 0;
   font-size: 12px;
 }
+
 .dark-light-mode:hover {
   background-color: #4b6efa;
   box-shadow: 1px 1px 5px #000000;
 }
+
 .dark-light-mode:focus {
   outline: none;
 }
@@ -122,15 +124,20 @@ input {
   width: 90%;
   height: 30px;
   border-radius: 1%;
-  background-color: #93a5eb;
-  color: #323232;
+  background-color: #6881e7;
+  color: white;
   border: 2px solid #3e64ff;
   caret-color: #000;
   border-radius: 2%;
+  font-size: 15px;
 }
 
 input:focus {
   outline: none;
+}
+
+input::placeholder {
+  color: white;
 }
 
 button {
@@ -165,7 +172,7 @@ button {
   padding: 10px;
 }
 
-.card > p {
+.card>p {
   font-family: "Montserrat", sans-serif;
   margin: 2px;
   font-size: 15px;
@@ -182,6 +189,16 @@ h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   color: #3e64ff;
+}
+
+.directions {
+  text-align: center;
+  width: 80%;
+  color: #fff;
+}
+
+.note {
+  font-style: italic;
 }
 
 /* ---------- Media Queries ---------- */
