@@ -55,7 +55,7 @@ const elementCreator = (data) => {
       .setHTML(
         `<h1>${data.data[i].agency_name}</h1> <p>${
           data.data[i].program_type_description
-        }</p><a href="#${[i]}">More Info</a>`
+        }</p><a class="link" href="#${[i]}">More Info</a>`
       )
       .setMaxWidth("300px");
     if (data.data[i].location && data.data[i].location.latitude) {
