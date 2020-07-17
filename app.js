@@ -1,3 +1,8 @@
+const form = document.querySelector("form");
+
+// This array holds the marker count for the map.
+let currentMarkers = [];
+
 // Adding the map using Mapbox GL JS
 mapboxgl.accessToken =
   "pk.eyJ1IjoiaGZjcG9zdCIsImEiOiJja2NnemNmZ2cwcXU2MnNucXhscGh2dWk2In0.9mlPi2i5taDiPLkmEXbSEg";
@@ -7,8 +12,10 @@ var map = new mapboxgl.Map({
   center: [-76.182, 42.868], // starting position [lng, lat]
   zoom: 5, // starting zoom
 });
-//Dark mode style - mapbox://styles/hfcpost/ckcnkb2yu1d931imm7q2a6237
+
+// Main API endpoint
 const url = "https://data.ny.gov/resource/6nvr-tbv8.json";
+
 // Making an AXIOS get request to the New York State API.
 const apiCall = async (city) => {
   const response = await axios.get(`${url}?program_city=${city}`);
@@ -22,40 +29,33 @@ const apiCall = async (city) => {
 
 // Function that grabs user input and sanitizes it.
 const userInput = (e) => {
-  // Stops page from reloading on form submit.
   e.preventDefault();
-  // Grabs user input.
   const userCity = document.querySelector(".userInput").value;
-  // Makes user input lowercase.
   let lowerCase = userCity.toLowerCase();
-  // Looks for the first letter and makes it uppcase, if two or more words,
-  // it will make that words first character uppcase as well.
+
+  // This line will the first letter in each word the user inputs
   const city = lowerCase.replace(/\b\w/g, (l) => l.toUpperCase());
-  // Sets the value of the searh bar back to placeholder text.
   document.querySelector(".userInput").value = "";
-  // Makes API call.
   apiCall(city);
 };
 
-// Grabbing the form and adding an event listener.
-const form = document.querySelector("form");
+// Adding an event listener to the form
 form.addEventListener("submit", userInput);
-
-// This array holds the marker count for the map.
-let currentMarkers = [];
 
 // Function that marks map and creates cards.
 const elementCreator = (data) => {
-  // Sorts the elements in data.data placing an orgainizations programs next to eachother.
+  // Sorts the elements in data.data placing orgainizations in alphabetical order, this is useful because
+  // many orgainizations have multiple programs listed together and this will place them all together.
   data.data.sort((a, b) => (a.agency_name > b.agency_name ? 1 : -1));
 
   // Not my code right here see => https://stackoverflow.com/questions/46155523/mapbox-clear-all-current-markers
-  // needed to clear all the markers from the map when switching cities and this guy had a good solution.
+  // needed to clear all the markers from the map when switching cities and this person had a good solution.
   if (currentMarkers.length !== 0) {
     for (let i = currentMarkers.length - 1; i >= 0; i--) {
       currentMarkers[i].remove();
     }
   }
+
   // Back to my code.
   for (let i = 0; i < data.data.length; i++) {
     let popup = new mapboxgl.Popup({ offset: 25 })
@@ -89,7 +89,7 @@ const elementCreator = (data) => {
 
 // This is the function that creates the card elements.
 // There are multiple ways cards will be added becuase some of the JSON
-// has incomplete records and I wanted to minimize the amount of undefined
+// has incomplete records and I wanted to minimize the amount of "undefined"
 // being displayed.
 const addCard = (data) => {
   for (let i = 0; i < data.data.length; i++) {

@@ -153,17 +153,23 @@ _Please Note: This time frame only includes items in the MVP list, Nothing from 
 ```
 // Function that grabs user input and sanitizes it.
 const userInput = (e) => {
+
   // Stops page from reloading on form submit.
   e.preventDefault();
+
   // Grabs user input.
   const userCity = document.querySelector(".userInput").value;
+
   // Makes user input lowercase.
   let lowerCase = userCity.toLowerCase();
+
   // Looks for the first letter and makes it uppcase, if two or more words,
   // it will make that words first character uppcase as well.
   const city = lowerCase.replace(/\b\w/g, (l) => l.toUpperCase());
+
   // Sets the value of the searh bar back to placeholder text.
   document.querySelector(".userInput").value = "";
+
   // Makes API call.
   apiCall(city);
 };
