@@ -83,11 +83,11 @@ _Please Note: The second JSON object does not contain latitude and longitude. Un
 
 |                                                                       Mobile                                                                        |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------: |
-| ![Mobile](https://git.generalassemb.ly/HenryCook/super-project/blob/master/wire-frames/Screen%20Shot%202020-07-11%20at%203.57.52%20PM.png?raw=true) |
+| ![Mobile](https://github.com/Henry-Cook/NYS-Mental-Health-Services-Locator/blob/master/wire-frames/Screen%20Shot%202020-07-11%20at%203.57.52%20PM.png?raw=true) |
 
 |                                                                       Desktop                                                                        |
 | :--------------------------------------------------------------------------------------------------------------------------------------------------: |
-| ![desktop](https://git.generalassemb.ly/HenryCook/super-project/blob/master/wire-frames/Screen%20Shot%202020-07-11%20at%204.05.25%20PM.png?raw=true) |
+| ![desktop](https://github.com/Henry-Cook/NYS-Mental-Health-Services-Locator/blob/master/wire-frames/Screen%20Shot%202020-07-11%20at%204.05.25%20PM.png?raw=true) |
 
 Made with [wireframe.cc](https://wireframe.cc/)
 
