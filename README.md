@@ -1,6 +1,6 @@
 # New York State Mental Health Services Locator
 
-https://pages.git.generalassemb.ly/HenryCook/NYS-Mental-Health-Services-Locator/
+ https://henry-cook.github.io/NYS-Mental-Health-Services-Locator/
 
 ## Project Description
 
