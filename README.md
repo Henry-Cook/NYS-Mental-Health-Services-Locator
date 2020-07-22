@@ -125,7 +125,7 @@ _Features that will help create a better expierence and better website._
 
 ## Priority Matrix
 
-![Priority Matrix Chart](https://git.generalassemb.ly/HenryCook/super-project/blob/master/Priority-Matrix/Untitled%20Diagram.png?raw=true)
+![Priority Matrix Chart](https://github.com/Henry-Cook/NYS-Mental-Health-Services-Locator/blob/master/Priority-Matrix/Untitled%20Diagram.png?raw=true)
 
 ## Timeframes
 
