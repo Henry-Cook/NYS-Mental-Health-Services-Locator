@@ -121,7 +121,7 @@ _Features that will help create a better expierence and better website._
 | July 14    | Create functions for user input, add Mapbox map, and create a function for API call.          | Complete   |
 | July 15    | Plot data on map from api call, dynamically add returned content, add pop-ups to map markers. | Complete   |
 | July 16    | Add CSS for responsivness on desktop, style map and card lists, make sure MVP is completed.   | Complete   |
-| July 17    | Presentations                                                                                 | Incomplete |
+| July 17    | Presentations                                                                                 | Complete |
 
 ## Priority Matrix
 
